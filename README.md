@@ -1,4 +1,4 @@
-# vagrant-centos7
+# centos7
 >centos 7 Vagrant 开发环境（支持php版本切换，包含编译安装nginx，apache，mysql，php，redis，memcache，opache, 额外的ftp登录，phpmyadmin，composer） 2017/08/16
 
 特别感谢 [OneinStack](https://oneinstack.com) [GitHub](https://github.com/lj2007331/oneinstack)
@@ -26,56 +26,53 @@
 - 软件安装路径：/usr/local/
 - mysql 数据文件：/data/mysql/data
 - 日记文件:
-- > apache：/data/wwwlogs/apache
-- > nginx: /data/wwwlogs/nginx
-- > php：/data/wwwlogs/php
-- > mysql：/data/mysql
+    - apache：/data/wwwlogs/apache
+    - nginx: /data/wwwlogs/nginx
+    - php：/data/wwwlogs/php
+    - mysql：/data/mysql
 
-## 安装
-- ### install VirtualBox 5.1.8
-    [https://www.virtualbox.org/wiki/Download_Old_Builds_5_1](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
+## 说明
 
-- ### install Vagrant 1.8.6
-    [https://releases.hashicorp.com/vagrant/1.8.6/](https://releases.hashicorp.com/vagrant/1.8.6/)
+> 由于网络墙问题，所以推荐下载box安装 
+ 
+> 默认用户:vagrant 密码:vagrant
 
-- ### git clone Vagrantfile
-    ```git
-    git clone git@github.com:Hzhihua/vagrant-centos7.git
-    cd vagrant-centos7
-    vagrant up
-    vagrant ssh
-    ```
+> root用户未激活，使用 sudo 提权
 
-- ### 如何是window平台，可选择git作为cmd命令行
-    [https://git-scm.com/downloads](https://git-scm.com/downloads)
 ## 通过box安装
-- [box下载](http://)
+> ### install VirtualBox 5.1.24
+> [https://www.virtualbox.org/wiki/Download_Old_Builds_5_1](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
+
+> ### install Vagrant 1.9.5
+> [https://releases.hashicorp.com/vagrant/](https://releases.hashicorp.com/vagrant/)
+
+> ### window平台，可选择git作为cmd命令行(自动补全)
+> [https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+> ### 由于网络墙问题，所以上传至百度云  
+> [https://pan.baidu.com/s/1mir8Y7Y](https://pan.baidu.com/s/1mir8Y7Y)  密码：99eb
+
+
+> ### 如何用迅雷下载？？
+
+打开控制台(F12)->点击console->输入
+```angularjs
+Object.defineProperty(this, 'navigator', {value: {platform: ""}});
+```
+按回车，点击下载即可弹出下载链接
+
+```angularjs
+mkdir centos7  #创建文件夹centos7
+cd centos7  #进入文件夹centos7
+vagrant box add centos7 /path/to/centos7.box  #以centos7.box文件为基础创建新的box
+vagrant init centos7  #生成centos7 Vagranfile配置文件
+vagrant up  #启动虚拟机
+vagrant ssh  #登陆虚拟机
+```
 
 ## 防火墙
->停止firewalld服务
-```coffeescript
-sudo systemctl stop firewalld
-```
->禁用firewalld服务
-```coffeescript
-sudo systemctl mask firewalld
-```
->将相应规则添加至防火墙
-```coffeescript
-sudo cp ~/iptables /etc/sysconfig/
-```
->注册iptables服务
-```coffeescript
-sudo systemctl enable iptables.service
-```
->开启服务
-```coffeescript
-sudo systemctl start iptables.service
-```
->查看状态
-```coffeescript
-sudo systemctl status iptables.service
-```
+> 默认关闭
+
 详细参考：[http://www.cnblogs.com/kreo/p/4368811.html](http://www.cnblogs.com/kreo/p/4368811.html)
 
 ## 添加开机自启动

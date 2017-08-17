@@ -52,19 +52,10 @@
 > ### 由于网络墙问题，所以上传至百度云  
 > [https://pan.baidu.com/s/1mir8Y7Y](https://pan.baidu.com/s/1mir8Y7Y)  密码：99eb
 
-
-> ### 如何用迅雷下载？？
-
-打开控制台(F12)->点击console->输入
-```angularjs
-Object.defineProperty(this, 'navigator', {value: {platform: ""}});
-```
-按回车，点击下载即可弹出下载链接
-
 ```angularjs
 mkdir centos7  #创建文件夹centos7
 cd centos7  #进入文件夹centos7
-vagrant box add centos7 /path/to/centos7.box  #以centos7.box文件为基础创建新的box
+vagrant box add centos7 /path/to/download/centos7.box  #以centos7.box文件为基础创建新的box
 vagrant init centos7  #生成centos7 Vagranfile配置文件
 vagrant up  #启动虚拟机
 vagrant ssh  #登陆虚拟机
@@ -72,20 +63,6 @@ vagrant ssh  #登陆虚拟机
 
 ## 防火墙
 > 默认关闭
-
-详细参考：[http://www.cnblogs.com/kreo/p/4368811.html](http://www.cnblogs.com/kreo/p/4368811.html)
-
-## 添加开机自启动
-> 把php-fpm的脚本写好后放进/etc/rc.d/init.d/目录
-```coffeescript
-sudo chkconfig --add php-fpm
-sudo chkconfig php-fpm on  # 启动
-sudo chkconfig php-fpm off # 关闭
-```
-
-> 把启动程序的命令添加到/etc/rc.d/rc.local文件中
-
-参考：[http://www.cnblogs.com/buffer/archive/2011/08/15/2138762.html](http://www.cnblogs.com/buffer/archive/2011/08/15/2138762.html)
 
 ## Apache
 ```coffeescript
@@ -122,6 +99,3 @@ sudo ./vhost.sh
 
 ## 其他详细操作
 参考：[https://oneinstack.com/install/](https://oneinstack.com/install/)
-
-## 视频教程
-[http://www.imooc.com/learn/805](http://www.imooc.com/learn/805)

@@ -6,6 +6,11 @@
 ## 预览图
 ![change_php_version](https://raw.githubusercontent.com/wiki/Hzhihua/vagrant-centos7/change-php-version.png)
 
+## 依赖
+- [Vagrant](https://www.vagrantup.com/downloads.html)
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- [Git](https://git-scm.com/downloads)（Windows）
+
 ## 安装
 > 在命令行执行(推荐)  
 ```coffeescript

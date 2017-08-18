@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  # config.vm.box = "hzhihua/centos7"
+  config.vm.box = "hzhihua/centos7"
 
   # 虚拟机hostname
   config.vm.hostname = "centos7"

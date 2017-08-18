@@ -1,5 +1,5 @@
 # centos7
->centos 7 Vagrant 开发环境（支持php版本切换，包含编译安装nginx，apache，mysql，php，redis，memcache，opache, 额外的ftp登录，phpmyadmin，composer） 2017/08/18
+>centos 7 Vagrant 开发环境（支持php版本切换，包含编译安装nginx，apache，mysql，php，redis，memcache，opache, 额外的ftp登录，phpmyadmin） 2017/08/18
 
 特别感谢 [OneinStack](https://oneinstack.com) [GitHub](https://github.com/lj2007331/oneinstack)
 
